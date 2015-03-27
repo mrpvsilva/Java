@@ -30,7 +30,7 @@ public class Configuracoes {
 
 	public Properties GetProp() {
 		try {
-			CriarProp();
+			
 			Properties props = new Properties();
 			if (is != null) {
 				props.load(is);
@@ -47,7 +47,6 @@ public class Configuracoes {
 
 	public void SalvarProp(Properties prop) {
 		try {
-			CriarProp();
 			prop.store(os, null);
 			os.flush();
 			os.close();
@@ -78,9 +77,6 @@ public class Configuracoes {
 
 	}
 
-	public static void main(String[] args) throws FileNotFoundException {
-		Configuracoes c = new Configuracoes();
-		c.CriarProp();
-	}
+	
 
 }
